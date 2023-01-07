@@ -1,0 +1,28 @@
+\begin{tabular}{|c|c|c|}
+    \hline
+    Typ warstwy     & Wielkość wyjściowa  & Ilość parametrów \nl
+    Conv2D          & $(512,\ 512,\ 32)$  & 2080    \nl
+    MaxPooling2D    & $(256,\ 256,\ 32)$  & 0       \nl
+    Conv2D          & $(256,\ 256,\ 64)$  & 8256    \nl
+    MaxPooling2D    & $(128,\ 128,\ 64)$  & 0       \nl
+    Conv2D          & $(128,\ 128,\ 32)$  & 2080    \nl
+    Conv2D          & $(128,\ 128,\ 64)$  & 8256    \nl
+    Conv2D          & $(128,\ 128,\ 64)$  & 4160    \nl
+    Conv2D          & $(128,\ 128,\ 128)$ & 32896   \nl
+    MaxPooling2D    & $(64,\ 64,\ 128)$   & 0       \nl
+    Dropout         & $(64,\ 64,\ 128)$   & 0       \nl
+    Conv2D          & $(64,\ 64,\ 64)$    & 8256    \nl
+    Conv2D          & $(64,\ 64,\ 128)$   & 32896   \nl
+    Conv2D          & $(64,\ 64,\ 128)$   & 16512   \nl
+    Conv2D          & $(64,\ 64,\ 256)$   & 131328  \nl
+    MaxPooling2D    & $(32,\ 32,\ 256)$   & 0       \nl
+    Dropout         & $(32,\ 32,\ 256)$   & 0       \nl
+    Conv2D          & $(32,\ 32,\ 256)$   & 65792   \nl
+    Conv2D          & $(32,\ 32,\ 128)$   & 131200  \nl
+    Conv2D          & $(32,\ 32,\ 64)$    & 8256    \nl
+    Conv2D          & $(32,\ 32,\ 32)$    & 2080    \nl
+    Dropout         & $(32,\ 32,\ 32)$    & 0       \nl
+    Conv2DTranspose & $(32,\ 32,\ 11)$    & 8811    \nl
+    Reshape         & $(32,\ 32,\ 11)$    & 0       \nl
+    Softmax         & $(32,\ 32,\ 11)$    & 0       \nl
+\end{tabular}
