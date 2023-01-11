@@ -149,31 +149,31 @@ Następnym krokiem będzie wizualne zbadanie predykcji każdego z modeli.
 
 \begin{center}
   \includegraphics[width=0.9\linewidth]{figures/own.pdf}
-  \captionof{figure}{Predykcja sieci autorskiej.}
+  \captionof{figure}{Dane wejściowe oraz odpowiedzi sieci autorskiej.}
   \label{fig:own_resp}
 \end{center}
 
 \begin{center}
   \includegraphics[width=0.9\linewidth]{figures/mobile.pdf}
-  \captionof{figure}{Predykcja sieci MobileNet.}
+  \captionof{figure}{Dane wejściowe oraz odpowiedzi sieci MobileNet.}
   \label{fig:mobile_resp}
 \end{center}
 
 \begin{center}
   \includegraphics[width=0.9\linewidth]{figures/efficient.pdf}
-  \captionof{figure}{Predykcja sieci EfficientNet.}
+  \captionof{figure}{Dane wejściowe oraz odpowiedzi sieci EfficientNet.}
   \label{fig:efficient_resp}
 \end{center}
 
 \begin{center}
   \includegraphics[width=0.9\linewidth]{figures/mobile_frozen.pdf}
-  \captionof{figure}{Predykcja zamrożonej sieci MobileNet.}
+  \captionof{figure}{Dane wejściowe oraz odpowiedzi zamrożonej sieci MobileNet.}
   \label{fig:mobile_frozen_resp}
 \end{center}
 
 \begin{center}
   \includegraphics[width=0.9\linewidth]{figures/efficient_frozen.pdf}
-  \captionof{figure}{Predykcja zamrożonej sieci EfficientNet.}
+  \captionof{figure}{Dane wejściowe oraz odpowiedzi zamrożonej sieci EfficientNet.}
   \label{fig:efficient_frozen_resp}
 \end{center}
 
@@ -182,6 +182,31 @@ Okazuje się, że sieci które objawiały się najlepszymi wynikami uczenia (\re
 
 \section{Wnioski}
 Stworzenie własnej sieci która od początku miała za zadanie rozpoznawać cyfry na planszy okazało się dużo bardziej efektywne od modyfikowania istniejących sieci które, albo błądziły ze swoimi odpowiedziami i próbowały ,,oszukać'' funkcję straty, albo nie nauczyły się niczego. Prawdopodobnie istnieje możliwość transplantacji warstw między modelami tak aby dawały one bardzo zadawalające efekty, ale wymaga to bardzo dobrej znajomości narzędzi, oraz wiedzy na temat tego czego i jak tak naprawde się ta sieć uczy.
+
+\newpage
+\appendix
+
+\section{Listowanie struktury sieci}
+\label{app:listowanie}
+\begin{center}
+  \input{tables/own.tex}
+\end{center}
+% \footnote{Wizualizacja wygenerowana dzięki narzędziu \url{http://alexlenail.me/NN-SVG/LeNet.html}}.
+% Nie byłem w stanie tego wrzucić wyżej, gdzie jest ten obrazek, bo mi nie działał footnote :(
+
+\section{Kod źródłowy}
+Kody źródłowe umieszczone zostały w repozytorium GitHub:
+
+\noindent \url{https://github.com/mlodybercik/widzenie-komputerowe-projekt}.
+
+\section{Cześć interaktywna}
+
+Dodatkowo do testów modeli zostało stworzone interaktywne narzędzie do badania i testowania własnego pisma ze stworzonymi modelami. Oprogramowanie wyświetla jedną szeroką planszę podzieloną na dwa obszary, jedna na której użytkownik może rysować i druga na której wyświetlane są odpowiedzi modelu. Korzystając z klawiszy od \verb+1+ do \verb+9+ użytkownik może zmienić aktualnie wyświetlaną warstwę odpowiedzi modelu (dodatkowo klawisz \verb+`+ wyświetla warstwę tła), za pomocą klawiszy od \verb+q+ do \verb+p+ można zmienić wielkość pędzla. Wciskając klawisz \verb+Enter+ następuje predykcja, a klawisz \verb+Backspace+ czyści plansze rysunku użytkownika, dodatkowo klawisz \verb+x+ wstawia w część rysunku wygenerowany obraz taki sam jak użyty do uczenia modelu.
+
+\begin{center}
+  \includegraphics[width=0.75\linewidth]{figures/bercikpaint.png}
+  \captionof{figure}{Przedstawienie działania narzędzia. Aktualnie wyświetlana jest warstwa pokazująca cyfrę 5.}
+\end{center}
 
 \begin{thebibliography}{9}
   \bibitem{bib:yolo}
@@ -194,21 +219,6 @@ Stworzenie własnej sieci która od początku miała za zadanie rozpoznawać cyf
   Mingxing Tan and Quoc V. Le
   EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks (2019)
 \end{thebibliography}
-
-\appendix
-
-\section{Listowanie struktury sieci}
-\label{app:listowanie}
-\begin{center}
-  \input{tables/own.tex}
-\end{center}
-% \footnote{Wizualizacja wygenerowana dzięki narzędziu \url{http://alexlenail.me/NN-SVG/LeNet.html}}.
-% Nie byłem w stanie tego wrzucić wyżej, gdzie jest ten obrazek, bo mi nie działał footnote :(
-
-\section{Dodatek}
-Kody źródłowe umieszczone zostały w repozytorium GitHub:
-
-\noindent \url{https://github.com/mlodybercik/widzenie-komputerowe-projekt}.
 
 
 \end{document}
